@@ -1,0 +1,206 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Agentcontent {
+    background-image: url('src/assets/imgs/Vector.png'), url('src/assets/imgs/Vector3.png');
+    background-position: right top, left bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+    overflow: auto;
+    overflow-x: hidden;
+
+    .Gradient {
+        background: linear-gradient(90deg, #F89C34 31.27%, #FF4C57 55.92%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+
+    }
+}
+
+
+
+.siderleft {
+    // background-color: red;
+    display: flex;
+    height: 95%;
+    justify-content: space-between;
+    flex-direction: column;
+    border-right: 1px solid #cecece;
+
+}
+
+.Sidenavigationbaruser {
+    width: 289px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: left 2s;
+    left: calc(100% - 290px);
+    overflow: auto;
+    overflow-x: hidden;
+
+    .SidenavigationbaruserInput {
+        width: 240px;
+        height: 36px;
+        margin: 16px auto;
+    }
+
+    .Sidenavigationbaritem {
+        width: 290px;
+        height: 78px;
+        // background-color: aqua;
+        box-sizing: border-box;
+        padding-top: 19px;
+
+
+        &:hover {
+            background-color: #EAECED87;
+        }
+    }
+
+    .agentedit {
+        position: absolute;
+        top: 9px;
+        right: 10px;
+        font-size: 25px;
+
+
+    }
+
+}
+
+
+.contentfirstp {
+    margin-top: 26px;
+    text-align: center;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+}
+
+.contenttwop {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 400;
+
+}
+
+.contentbuttoninput {
+    width: 587px;
+    height: 58px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 50px;
+
+    .ant-input-affix-wrapper>input.ant-input {
+        color: #929292;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .contentbuttoninputButton {
+        color: #FFFFFF;
+        background: linear-gradient(90deg, #F89C34 -2.73%, #FF4C57 101.99%);
+        width: 100px;
+        font-size: 14px;
+    }
+}
+
+
+
+.agentuserchart {
+    width: 670px;
+    height: 480px;
+    margin: 0 auto;
+    overflow: auto;
+    scrollbar-color: transparent transparent;
+
+    .left,
+    .right {
+        display: flex;
+        margin: 25px 0px;
+
+    }
+
+    .left {
+        justify-content: flex-end;
+    }
+
+    .right {
+        justify-content: flex-start;
+
+        .agentuserchartcontent {
+            background-color: #FFFFFF;
+            font-weight: 500;
+            color: #292D32;
+            box-shadow: 2px 2px 10px 2px #D6C7B533;
+            flex-wrap: wrap;
+
+            >span {
+                color: #F9AA52;
+            }
+
+            .agentuserchartpeople {
+                width: 290px;
+                height: 78px;
+                background-color: #F8F8F8;
+                border-radius: 15px;
+                flex-direction: row;
+                margin-top: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #cecece;
+
+                .agentuserchartpeopleimg {
+                    width: 41px;
+                    height: 41px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-color: #cecece;
+                    margin-right: 20px;
+
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .agentuserchartcontent {
+        max-width: 565px;
+        font-family: 'Microsoft YaHei';
+        background-color: #292D32D9;
+        padding: 18px 30px 18px 30px;
+        display: flex;
+        border-radius: 10px;
+        align-self: flex-start;
+        word-wrap: break-word;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: #FFFFFF;
+    }
+
+    .agentuserchartimg {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 10px;
+
+        >img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

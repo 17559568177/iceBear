@@ -1,0 +1,283 @@
+@import '@/assets/style/variable.less';
+
+@grayColor: #bdc3c7;
+@p-3-size: 0.75rem; // Tailwind中的p-3通常是0.75rem
+@rounded-md-radius: 0.5rem; // Tailwind中的rounded-md通常是0.375rem
+@border-width: 1px; // 默认边框宽度
+@border-color: #e2e8f0; // 默认边框颜色，浅灰色
+
+// 颜色变量可能需要根据你的设计指南调整
+@primary-bg: #3490dc; // 假设的主要背景颜色
+@primary-foreground: #ffffff; // 假设的主要前景（文本）颜色
+@primary-bg-hover: rgba(52, 144, 220, 0.9); // 假设的主要背景悬停颜色
+
+@secondary-bg: #ffed4a; // 假设的次要背景颜色
+@secondary-foreground: #1a202c; // 假设的次要前景（文本）颜色
+@secondary-bg-hover: rgba(255, 237, 74, 0.8); // 假设的次要背景悬停颜色
+
+@destructive-bg: #e53e3e; // 假设的警告/危险背景颜色
+@destructive-foreground: #ffffff; // 假设的警告/危险前景（文本）颜色
+.itextArea {
+    // width: 300px;
+    flex-grow: 1;
+    flex-basis: auto;
+    :global {
+        .ant-input {
+            width: 100%;
+        }
+    }
+}
+
+.chatItem {
+    display: flex;
+
+    .chatItemMain {
+        padding: 0.75rem; // p-3
+        border-radius: 12px; // rounded, 需要定义变量
+        height: fit-content; // h-fit
+        display: flex; // flex
+        gap: 0.75rem; // gap-4
+        align-items: flex-start; // items-start
+        width: 100%; // w-full
+        flex: 1; // flex-1
+        margin-bottom: 1.5rem; // mb-6
+
+        &:last-of-type {
+            margin-bottom: 0; // last-of-type:mb-0
+        }
+
+        &.rev {
+            flex-direction: row-reverse;
+        }
+
+        .chatSpan {
+            margin-left: 0.4rem;
+            font-size: 1.05rem;
+            color: @grayColor;
+        }
+
+        .chatItemBlock {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            overflow: hidden;
+            flex: 1;
+            .chatItemB {
+                display: flex;
+                flex-direction: column;
+                .chatp {
+                    font-size: 0.75rem;
+                    &.prev {
+                        align-self: flex-end;
+                    }
+                }
+
+                .chatBlock {
+                    max-width: 100%; // max-w-full
+                    display: flex; // flex
+                    margin-top: 0.5rem; // mt-2，假设2等于0.5rem
+                    align-items: flex-end; // items-end
+                    gap: 0.5rem;
+
+                    .chatMd {
+                        padding: @p-3-size; // 替换为实际的大小，例如 0.75rem
+                        border-radius: @rounded-md-radius; // 替换为实际的圆角大小
+                        word-break: break-word;
+                        overflow: hidden;
+                        border: @border-width solid @border-color; // 设置边框的宽度和颜色
+                        background: white;
+
+                        .chatMdFooter {
+                            margin: 0 10px;
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 16px;
+                            border-top: 1px solid gainsboro;
+                            padding-top: 16px;
+                        }
+
+                        @media screen and (max-width: 540px) {
+                            max-width: 340px;
+                            ::-webkit-scrollbar {
+                                /*滚动条整体样式*/
+                                width: 6px !important; /*高宽分别对应横竖滚动条的尺寸*/
+                                height: 6px !important;
+                            }
+                        }
+                        @media screen and (max-width: 420px) {
+                            max-width: 250px;
+                            ::-webkit-scrollbar {
+                                /*滚动条整体样式*/
+                                width: 6px !important; /*高宽分别对应横竖滚动条的尺寸*/
+                                height: 6px !important;
+                            }
+                        }
+                        &.bg-primary {
+                            background-color: @primary-bg;
+                            color: @primary-foreground;
+                            &:hover {
+                                background-color: @primary-bg-hover;
+                            }
+                        }
+
+                        &.bg-secondary {
+                            background-color: @secondary-bg;
+                            color: @secondary-foreground;
+                            &:hover {
+                                background-color: @secondary-bg-hover;
+                            }
+                            &.markdown-table {
+                                // markdown 表格的特定样式
+                            }
+                        }
+
+                        &.bg-destructive {
+                            background-color: @destructive-bg;
+                            color: @destructive-foreground;
+                        }
+                    }
+                    &.rev {
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+
+            &.rev {
+                flex-direction: row-reverse;
+            }
+        }
+
+        :global {
+            .ant-avatar-string {
+                font-size: 1.2rem;
+                // transform: scale(1) translateX(-50%) translateY(-2%) !important;
+            }
+        }
+    }
+}
+
+.mdCopy {
+    position: relative;
+    margin-top: 0.5rem; // 假设mt-2为0.5rem
+    overflow: auto;
+
+    padding: 0.5rem; // 假设p-2为0.5rem
+
+    button {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        margin-right: 0.5rem; // 假设mr-2为0.5rem
+        // display: none; // 默认隐藏
+        height: 1.5rem; // 假设h-6为1.5rem
+        width: 1.5rem; // 假设w-6为1.5rem
+        border-radius: 0.2rem; // 默认圆角大小
+        padding: 0; // p-0
+    }
+}
+
+.conversation {
+    display: flex;
+    height: 100%;
+    width: 100%; // 64 is 16rem assuming 1rem = 4
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 1rem; // 4 is 1rem assuming 1rem = 4
+    overflow: hidden;
+    // border-right: 1px solid; // 默认颜色需要根据上下文确定
+    font-size: 0.75rem; // 小字号，通常是0.75rem
+
+    .conversationList {
+        display: flex;
+        flex: 1 1 0%; // flex-grow: 1, flex-shrink: 1, flex-basis: 0%
+        flex-direction: column;
+        overflow: hidden;
+        overflow-x: hidden;
+        gap: 20px;
+        .btnContent {
+            display: flex; /* Enables Flexbox */
+            align-items: center; /* Vertical alignment */
+            justify-content: center; /* Horizontal alignment */
+            gap: 0.5rem; /* Optional: Adds space between icon and text */
+        }
+        div {
+            height: 100%;
+            // margin: 4px 0;
+        }
+    }
+}
+
+.conversationListItem {
+    width: 100%;
+    display: flex;
+    padding: 0 20px 0 0;
+    justify-content: space-between;
+    align-items: center;
+    .iconStyle {
+        cursor: pointer;
+        margin-right: 10px;
+        font-size: 18px;
+    }
+}
+
+.scrollArea {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    .scrollViewport {
+        height: 100%;
+        width: 100%;
+        border-radius: inherit;
+    }
+    .scrollBar {
+        display: flex;
+        touch-action: none;
+        user-select: none;
+        transition: color 0.2s;
+        height: 100%;
+        width: 0.625rem; // Assuming 2.5 is 0.625rem (1rem = 4 units in Tailwind by default)
+        border-left: 1px solid transparent;
+        padding: 1px;
+    }
+}
+
+.gptmarkdown {
+    // display: flex;
+    // align-items: center;
+    font-size: 16px;
+    .dot {
+        // display: inline;
+        float: right;
+        height: 16px;
+        width: 6px;
+        background-color: #e2e8f0;
+        margin-left: 2px;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    .visible {
+        opacity: 1;
+    }
+}
+
+.iconNormal {
+    color: grey;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s; /* 平滑过渡效果 */
+    &:hover {
+        color: @primary-color; /* hover 状态下的颜色 */
+    }
+}
+
+.iconFilled {
+    color: @primary-color; /* 默认颜色 */
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s; /* 平滑过渡效果 */
+    &:hover {
+        color: @primary-color; /* hover 状态下的颜色 */
+    }
+}

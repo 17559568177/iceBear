@@ -1,0 +1,60 @@
+@import '@/assets/style/local.google.fonts.css';
+@import '@/assets/style/variable.less';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: @body-font;
+    font-size: @normal-font-size;
+    //background-color: @body-color;
+
+    color: @text-color;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 8px; /* 滚动条宽度 */
+    height: 8px; /* 水平滚动条的高度 */
+}
+
+*::-webkit-scrollbar-track {
+    background: #f0f0f0; /* 滚动条轨道颜色 */
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #d9d9d9; /* 滚动条颜色 */
+    border-radius: 4px; /* 滚动条圆角 */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #40a9ff; /* 滚动条悬停颜色 */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #d9d9d9 #f0f0f0; /* 滚动条颜色 滚动条轨道颜色 */
+}

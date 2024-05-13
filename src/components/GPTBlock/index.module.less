@@ -1,0 +1,42 @@
+.gptMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+    .footer {
+        margin-top: auto;
+        display: flex;
+        align-items: end;
+        gap: 1rem;
+        padding: 1rem;
+        border-top-width: 1px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .chatMain {
+        &::-webkit-scrollbar {
+            display: none; // 移除滚动条
+        }
+        flex: 1 1 0%;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .main {
+            margin: auto; // m-auto
+            width: 100%; // w-full
+            max-width: 1280px; // max-w-screen-xl, 假设xl是1280px
+            overflow: auto; // overflow-auto
+            padding: 1rem; // p-4, 假设4等于1rem
+
+            .title {
+                margin: auto; // m-auto
+                margin-top: 0.5rem; // mt-2，假设2等于0.5rem
+                width: fit-content; // w-fit
+                text-align: center; // text-center
+            }
+        }
+    }
+}

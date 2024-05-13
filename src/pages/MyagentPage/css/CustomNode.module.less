@@ -1,0 +1,131 @@
+.customnode {
+    .start {
+        width: 307px;
+        height: 79px;
+        border-radius: 10px;
+        border: 1px solid #D9D9D9;
+        box-shadow: 0px 4px 8px 0px #4E4E4E14;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 20px 30px;
+        justify-content: space-between;
+        flex: 0 0 auto;
+
+        &_left {
+            width: 105px;
+            height: 36px;
+            display: flex;
+            justify-content: space-between;
+
+            &_text {
+                width: 50px;
+                height: 36px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+
+        &_right {
+            width: 50px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        span {
+            color: #929292;
+        }
+    }
+
+
+    .wfnode {
+        width: 307px;
+        height: 186px;
+        background-color: #fff;
+        border-radius: 15px;
+        border: 1px solid #FCC566;
+        box-shadow: 0px 0px 0px 1px #FCC566;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        flex: 0 0 auto;
+
+
+        &_top {
+            width: 100%;
+            height: 80px;
+            border-bottom: 1px solid #cececc;
+            padding: 22px 30px;
+            display: flex;
+            justify-content: space-between;
+
+
+            &_left {
+                width: 156px;
+                height: 36px;
+                display: flex;
+                justify-content: space-between;
+
+                &_text {
+                    width: 95px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                }
+            }
+
+        }
+
+        &_lower {
+            width: 100%;
+            height: 105px;
+            display: flex;
+            box-sizing: border-box;
+            position: relative;
+
+            &_left {
+                width: 153px;
+                border-right: 1px solid #cececc;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-content: center;
+
+                &_item {
+                    width: 110px;
+                    height: 28px;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+
+
+                }
+
+                &_item:hover {
+                    background-color: #D9D9D9;
+                }
+            }
+
+            &_right {
+                width: 153px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding-right: 20px;
+            }
+
+            &_img {
+                position: absolute;
+                top: 40px;
+                left: 138px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,39 @@
+.gptMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.gptMain .footer {
+  margin-top: auto;
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  padding: 1rem;
+  border-top-width: 1px;
+  align-items: center;
+  justify-content: space-between;
+}
+.gptMain .chatMain {
+  flex: 1 1 0%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.gptMain .chatMain::-webkit-scrollbar {
+  display: none;
+}
+.gptMain .chatMain .main {
+  margin: auto;
+  width: 100%;
+  max-width: 1280px;
+  overflow: auto;
+  padding: 1rem;
+}
+.gptMain .chatMain .main .title {
+  margin: auto;
+  margin-top: 0.5rem;
+  width: fit-content;
+  text-align: center;
+}

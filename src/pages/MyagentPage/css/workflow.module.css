@@ -1,0 +1,240 @@
+.workflow {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: auto;
+}
+.workflow .left {
+  width: 165px;
+  height: 100%;
+  flex: 0 0 auto;
+  z-index: 2;
+  overflow: auto;
+  overflow-x: hidden;
+  background-color: #F7F7F7;
+}
+.workflow .left_input {
+  width: 120px;
+  height: 36px;
+  margin: 20px auto 10px;
+}
+.workflow .left p {
+  width: 120px;
+  margin: 15px auto;
+  font-size: 15px;
+  color: #292D32;
+}
+.workflow .left :global .ant-collapse-header {
+  flex-direction: row-reverse;
+}
+.workflow .left :global .ant-collapse-header-text {
+  font-size: 15px;
+  color: #292D32;
+  padding-left: 7px;
+}
+.workflow .left :global .ant-collapse-content-box {
+  padding: 0;
+}
+.workflow .left :global .ant-collapse-content {
+  margin: -25px;
+}
+.workflow .left_content {
+  width: 120px;
+  margin: 0 auto;
+}
+.workflow .left_content_item {
+  width: 120px;
+  height: 60px;
+  box-shadow: -4px 0px 10px 0px #4E4E4E14;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 15px auto;
+}
+.workflow .left_content_item img {
+  width: 32px;
+  height: 32px;
+}
+.workflow .left_content_item span,
+.workflow .left_content_item_span {
+  font-family: Microsoft YaHei;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: #292D32;
+  width: 60px;
+}
+.workflow .left_content_item_span {
+  font-size: 13px !important;
+}
+.workflow .right {
+  flex: auto;
+  position: relative;
+  overflow: auto;
+  width: 100%;
+}
+.workflow .right .top {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  z-index: 5 !important;
+  position: absolute;
+  top: 20px;
+}
+.workflow .right .top_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+.workflow .right .top_button :global .ant-btn {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 18px;
+  background-color: #292D32D9;
+}
+.workflow .right .bottom {
+  width: 205px;
+  height: 36px;
+  border-radius: 5px;
+  border: 1px solid #D9D9D9;
+  box-shadow: 4px 0px 10px 0px #4E4E4E14;
+  position: absolute;
+  bottom: 36px;
+  left: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 10px;
+  background-color: #fff;
+}
+.workflow .right .bottom_item {
+  height: 20px;
+  width: 65px;
+  display: flex;
+  justify-content: space-between;
+  border-right: 1px solid #cececc;
+  padding-right: 12px;
+}
+.workflow .word {
+  width: 336px;
+  z-index: 5;
+  padding: 15px;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: auto;
+}
+.workflow .word p {
+  font-family: Microsoft YaHei;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #292D32D9;
+}
+.workflow .word_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.workflow .word_top_left {
+  display: flex;
+  align-items: center;
+}
+.workflow .word_top_left p {
+  font-family: Microsoft YaHei;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  text-align: left;
+}
+.workflow .word_text {
+  padding: 10px 15px;
+  border-bottom: 1px solid #F3F3F3;
+  font-family: Microsoft YaHei;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: #A7A7A7;
+}
+.workflow .word_start {
+  height: 100px;
+  padding: 10px;
+  border-bottom: 1px solid #F3F3F3;
+}
+.workflow .word_start_int {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.workflow .word_start_int :global .ant-btn {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 18px;
+  background-color: #292D32D9;
+}
+.workflow .word_start_int :global .ant-input-outlined {
+  background-color: #F7F7F7;
+}
+.workflow .word_process {
+  width: 90%;
+  margin: 20px auto;
+}
+.workflow .word_process > p {
+  margin: 5px 0px 25px;
+}
+.workflow .word_process :global .ant-collapse-header {
+  padding: 0;
+  width: 240px;
+  flex-direction: row-reverse;
+}
+.workflow .word_process :global .ant-collapse-header::after {
+  content: '查看结果';
+  position: absolute;
+  right: 30px;
+  color: #929292;
+  font-family: Microsoft YaHei;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+}
+.workflow .word_process_item {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.workflow .word_process_item p {
+  font-family: Microsoft YaHei;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #292D32D9;
+}
+.workflow .word_end {
+  padding: 10px;
+  min-height: 300px;
+  position: relative;
+}
+.workflow .word_end > img {
+  position: absolute;
+  bottom: 33px;
+  right: 21px;
+}
+.workflow .word_end :global .ant-input-outlined {
+  background: #F7F7F7;
+}

@@ -1,0 +1,85 @@
+@import 'src/assets/style/variable.less';
+
+@height: 70px;
+
+.header {
+    // position: sticky;
+    // top: 0;
+    // z-index: 1;
+
+    height: @height;
+    width: 100%;
+
+    padding: 0 100px;
+
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+        padding: 0 20px;
+    }
+
+    background-color: white;
+
+    .menu {
+        width: 550px;
+        display: flex;
+        margin-left: auto;
+    }
+
+    .logo {
+        line-height: @height;
+        display: flex;
+        justify-self: center;
+        align-items: center;
+    }
+
+    :global {
+        .ant-menu {
+            width: 100px !important;
+        }
+
+        .ant-menu-horizontal {
+            height: @height;
+            background-color: white;
+        }
+
+        .ant-menu-title-content {
+            font-family: @body-font;
+            font-size: @normal-font-size;
+            font-weight: 700;
+        }
+    }
+
+
+
+    .button {
+        width: 96px;
+        height: 35px;
+        border-radius: 50px;
+        display: flex;
+        background-color: pink;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 18px;
+        background: linear-gradient(90deg, #F89C34 4.38%, #FF4C57 108.75%);
+
+
+        >span {
+            font-family: Gotham;
+            font-size: 12.5px;
+            font-style: italic;
+            font-weight: 425;
+            line-height: 15px;
+            text-align: left;
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+
+
+
+
+
+}
